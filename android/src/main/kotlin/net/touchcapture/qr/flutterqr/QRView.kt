@@ -123,7 +123,7 @@ class QRView(private val registrar: PluginRegistry.Registrar, id: Int) :
 
     private fun createBarCodeView(): BarcodeView? {
         val barcode = BarcodeView(registrar.activity())
-        barcode.decoderFactory = DefaultDecoderFactory(listOf(BarcodeFormat.PDF_417))
+        barcode.decoderFactory = DefaultDecoderFactory(listOf(BarcodeFormat.QR_CODE))
         barcode.decodeContinuous(
                 object : BarcodeCallback {
                     override fun barcodeResult(result: BarcodeResult) {
